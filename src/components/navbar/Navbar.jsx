@@ -47,7 +47,8 @@ export default function Navbar() {
                 flexGrow: 1,
               }}
             >
-              <Link to="/">
+              <Link to="/eggsy">
+                {/* <Link to="/"> */}
                 <img
                   src={eggsy}
                   alt="EGGSY PUTO OVERLOAD"
@@ -55,7 +56,7 @@ export default function Navbar() {
                 />
               </Link>
             </Typography>
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/eggsy" style={{ textDecoration: "none" }}>
               <Button
                 color="inherit"
                 sx={{
@@ -66,7 +67,7 @@ export default function Navbar() {
                 Home
               </Button>
             </Link>
-            <Link to="/about" style={{ textDecoration: "none" }}>
+            <Link to="/eggsy/about" style={{ textDecoration: "none" }}>
               <Button
                 color="inherit"
                 sx={{
@@ -77,7 +78,7 @@ export default function Navbar() {
                 About
               </Button>
             </Link>
-            <Link to="/branches" style={{ textDecoration: "none" }}>
+            <Link to="/eggsy/branches" style={{ textDecoration: "none" }}>
               <Button
                 color="inherit"
                 sx={{
@@ -89,7 +90,7 @@ export default function Navbar() {
               </Button>
             </Link>
 
-            <Link to="/contact-us" style={{ textDecoration: "none" }}>
+            <Link to="/eggsy/contact-us" style={{ textDecoration: "none" }}>
               <Button
                 color="inherit"
                 sx={{

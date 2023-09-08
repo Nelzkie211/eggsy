@@ -15,11 +15,16 @@ function App() {
       <Navbar />
       <Container sx={{ flexGrow: "1", minHeight: "85vh" }}>
         <Routes>
-          <Route path="/" Component={Home} />
+          <Route path="/eggsy/" Component={Home} />
+          <Route path="/eggsy/about" Component={About} />
+          <Route path="/eggsy/branches" Component={Branches} />
+          <Route path="/eggsy/contact-us" Component={ContactUs} />
+          <Route path="*" Component={NoPage} />
+          {/* <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/branches" Component={Branches} />
           <Route path="/contact-us" Component={ContactUs} />
-          <Route path="*" Component={NoPage} />
+          <Route path="*" Component={NoPage} /> */}
         </Routes>
       </Container>
 
