@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/"></Route>
+        <Route path="/eggsy/"></Route>
       </Routes>
       {/* <p>
         <i>@Nelzkie</i>
