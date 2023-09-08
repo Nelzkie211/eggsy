@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
+import NoPage from "./src/pages/NoPage";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -9,10 +9,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main:
-          process.env.NODE_ENV === "production"
-            ? "/eggsy/index.html"
-            : "/index.html",
+        main: process.env.NODE_ENV === "production" ? NoPage : "/index.html",
         // Add the route for the custom 404.html page
         404: "/404.html",
       },
