@@ -45,7 +45,7 @@ export default function Navbar() {
                 flexGrow: 1,
               }}
             >
-              <a href="/">
+              <a href="/eggsy">
                 <img
                   src={eggsy}
                   alt="EGGSY PUTO OVERLOAD"
