@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import * as React from "react";
+
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import {
   Box,
@@ -45,50 +47,59 @@ export default function Navbar() {
                 flexGrow: 1,
               }}
             >
-              <a href="/eggsy/">
+              <Link to="/">
                 <img
                   src={eggsy}
                   alt="EGGSY PUTO OVERLOAD"
                   style={{ width: "100px", verticalAlign: "middle" }}
                 />
-              </a>
+              </Link>
             </Typography>
-            <Button
-              color="inherit"
-              sx={{
-                textTransform: "capitalize",
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              Home
-            </Button>
-            <Button
-              color="inherit"
-              sx={{
-                textTransform: "capitalize",
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              About
-            </Button>
-            <Button
-              color="inherit"
-              sx={{
-                textTransform: "capitalize",
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              Branches
-            </Button>
-            <Button
-              color="inherit"
-              sx={{
-                textTransform: "capitalize",
-                display: { xs: "none", sm: "block" },
-              }}
-            >
-              Contact Us
-            </Button>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Button
+                color="inherit"
+                sx={{
+                  textTransform: "capitalize",
+                  display: { xs: "none", sm: "block", color: "#fff" },
+                }}
+              >
+                Home
+              </Button>
+            </Link>
+            <Link to="/about" style={{ textDecoration: "none" }}>
+              <Button
+                color="inherit"
+                sx={{
+                  textTransform: "capitalize",
+                  display: { xs: "none", sm: "block", color: "#fff" },
+                }}
+              >
+                About
+              </Button>
+            </Link>
+            <Link to="/branches" style={{ textDecoration: "none" }}>
+              <Button
+                color="inherit"
+                sx={{
+                  textTransform: "capitalize",
+                  display: { xs: "none", sm: "block", color: "#fff" },
+                }}
+              >
+                Branches
+              </Button>
+            </Link>
+
+            <Link to="/contact-us" style={{ textDecoration: "none" }}>
+              <Button
+                color="inherit"
+                sx={{
+                  textTransform: "capitalize",
+                  display: { xs: "none", sm: "block", color: "#fff" },
+                }}
+              >
+                Contact Us
+              </Button>
+            </Link>
           </Toolbar>
         </Container>
       </AppBar>
