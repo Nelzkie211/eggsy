@@ -3,32 +3,36 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/navbar/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import ContactUs from "./pages/ContactUs";
-import Branches from "./pages/Branches";
-import NoPage from "./pages/NoPage";
 import { Container } from "@mui/material";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import MainPage from "./pages/MainPage";
+import NoPage from "./pages/NoPage";
 function App() {
   return (
     <>
-      <Navbar />
-      <Container sx={{ flexGrow: "1", minHeight: "85vh" }}>
-        <Routes>
-          <Route path="/eggsy/" Component={Home} />
-          <Route path="/eggsy/about" Component={About} />
-          <Route path="/eggsy/branches" Component={Branches} />
-          <Route path="/eggsy/contact-us" Component={ContactUs} />
-          <Route path="*" Component={NoPage} />
-          {/* <Route path="/" Component={Home} />
+      <Provider store={store}>
+        <Navbar />
+        <Container sx={{ flexGrow: "1", minHeight: "85vh" }}>
+          <MainPage />
+          <Routes>
+            {/* <Route path="/eggsy/" Component={Home} />
+            <Route path="/eggsy/about" Component={About} />
+            <Route path="/eggsy/branches" Component={Branches} />
+            <Route path="/eggsy/contact-us" Component={ContactUs} />
+            <Route path="*" Component={NoPage} />  */}
+            {/* <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/branches" Component={Branches} />
-          <Route path="/contact-us" Component={ContactUs} />
-          <Route path="*" Component={NoPage} /> */}
-        </Routes>
-      </Container>
+          <Route path="/contact-us" Component={ContactUs} /> */}
+            <Route path="/eggsy" /> {/*remove eggsy once deployed*/}
+            <Route path="*" Component={NoPage} />
+          </Routes>
+        </Container>
 
-      <Footer />
+        <Footer />
+      </Provider>
+
       {/* <p>
         <i>@Nelzkie</i>
       </p> */}
