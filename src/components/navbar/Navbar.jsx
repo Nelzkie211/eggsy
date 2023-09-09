@@ -133,6 +133,7 @@ export default function Navbar() {
         open={drawerOpen}
         onClose={toggleDrawer}
         onClick={(v) => handleChange(v)}
+        pageVal={nav}
       />
     </Box>
   );
